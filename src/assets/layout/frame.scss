@@ -1,0 +1,147 @@
+/*
+    @Title : primeflex를 참조하는 공통 템플릿 SCSS
+
+    @Description:
+        (1) 클래스,속성값은 node_modules\primeflex\primeflex.css 의 규칙을 따라야 합니다.
+        (2) SCSS 정의 규칙
+            font-size : 2rem ; 이라는 CSS 속성을 정의하고 싶을때,
+            primeflex.css 에 존재하는 속성은 이를 @extend 하여 아래와 같이 작성합니다.
+            @extend .text-4xl
+
+            만약 해당하는 속성을 그룹화 해야하거나 @extend 할 수 없는 경우,
+            @mixin 및 변수를 이용하여 속성을 선언하고, @include로 사용합니다.
+            기본적으로는 primeflex 에 없는 속성은 사용을 지양합니다.
+*/
+/* *****   공통 변수 선언   ***** */
+$min-width: 768px;
+
+/* *****   공통 @mixin 선언   ***** */
+@mixin flex-default {
+    @extend .flex;
+    @extend .flex-column;
+}
+
+/* *****   클래스 선언   ***** */
+.Tntitle {
+    @extend .font-bold;
+    @extend .text-4xl;
+    @extend .p-3;
+    @extend .md\:text-2xl;
+}
+
+.Tnrow {
+    @include flex-default;
+    @extend .md\:flex-row;
+    @extend .md\:gap-4;
+    @extend .md\:py-3;
+}
+
+.Tnlabel {
+    @extend .flex;
+    @extend .flex-none;
+    @extend .font-bold;
+    @extend .p-3;
+    @extend .md\:w-12rem;
+    @extend .md\:text-base;
+}
+
+.Tninput {
+    @extend .flex;
+    @extend .my-auto;
+    @extend .flex-grow-1;
+}
+
+.Tndropdown {
+    @extend .flex;
+    @extend .flex-none;
+    @extend .my-auto;
+    @extend .px-3;
+    @extend .md\:w-16rem;
+}
+
+// -----------------------------------
+// -- tn-gird-form/title/content
+// -----------------------------------
+@mixin tn-grid-default {
+    @extend .m-0;
+    @extend .border-solid;
+    @extend .border-1;
+    @extend .border-black-alpha-30;
+}
+
+.tn-grid-form {
+    @extend .formgrid;
+    
+}
+
+.tn-grid-element {
+    @extend .m-0;
+    @extend .p-0;
+    @extend .field;
+    @extend .grid;
+    @extend .col-12;
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.tn-grid-element-body {
+    @include tn-grid-default();
+}
+
+.tn-grid-title {
+    @extend .p-2;
+    @extend .grid;
+    @extend .bg-bluegray-200;
+    @extend .align-items-center;
+    @extend .vertical-align-middle;
+    @include tn-grid-default();
+}
+
+.tn-grid-content {
+    @extend .p-2;
+    @extend .bg-white;
+    @extend .field;
+    @extend .grid;
+    @include tn-grid-default();
+}
+
+// -----------------------------------
+// -- tn-data-log
+// -----------------------------------
+@mixin tn-data-log-default {
+    @extend .m-0;
+    @extend .border-solid;
+    @extend .border-1;
+    @extend .border-black-alpha-30;
+}
+
+.tn-data-log-grid {
+    @extend .grid;
+    @extend .grid-nogutter;
+}
+
+.tn-data-log-title {
+    @extend .col-4;
+    @extend .pl-2;
+    @extend .bg-bluegray-200;
+    @include tn-data-log-default();
+}
+
+.tn-data-log-content {
+    @extend .col-8;
+    @extend .text-left;
+    @extend .p-3;
+    @extend .bg-white;
+    @include tn-data-log-default();
+}
+
+/* *****   테이블 속성   ***** */
+@media (max-width: 768px) {
+    .hidden-1 {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .hidden-2 {
+        display: none;
+    }
+}

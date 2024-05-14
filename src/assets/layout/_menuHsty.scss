@@ -1,0 +1,33 @@
+.p-menubar {
+    padding : 0;
+    background: var(--surface-ground);
+    color: var(--text-color);
+    border: 0;
+}
+  
+.p-button-group .p-button:first-of-type:not(:only-of-type) {
+    @extend .border-noround-right;
+    border-top-left-radius: 0;
+}
+  
+.p-button-group .p-button:last-of-type:not(:only-of-type) {
+    @extend .border-noround-left;
+    border-top-right-radius: 0;
+}
+  
+.p-button.p-button-contrast {
+    color: var(--gray-950);
+    background: var(--surface-card);
+    border: 0;
+}
+  
+.p-button.p-button-secondary {
+    color: var(--gray-600);
+    background: transparent;
+    border: 0
+}
+  
+.menu-slide:has(.p-button.p-button-secondary):hover {
+    color: var(--gray-600);
+    background: rgba(0, 0, 0, 0.03);
+}

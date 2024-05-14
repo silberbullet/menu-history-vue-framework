@@ -1,0 +1,17 @@
+.layout-footer {
+    transition: margin-left $transitionDuration;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--surface-border);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    span {
+        font-weight: 500; // font-medium에 해당하는 스타일
+        margin-left: 0.5rem; // ml-2에 해당하는 스타일
+    }
+}

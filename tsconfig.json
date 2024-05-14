@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": true,
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
+        "importHelpers": true,
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "types": ["vite/client", "vite-plugin-vue-layouts"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/utils/commonUtil.js"],
+    "exclude": ["node_modules", "src/components/*", "src/dictionary/*", "src/layouts/*"]
+}

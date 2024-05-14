@@ -1,0 +1,25 @@
+.layout-right {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 7rem 2rem 6rem 4rem;
+    position: relative;
+    transition: margin-left $transitionDuration;
+}
+.layout-menu-history {
+    position: fixed; /* 고정 위치 */
+    top: 5rem; /* 높이는 필요에 따라 조절하세요 */
+    right: 0;
+    z-index: 998;
+    flex: 1 1 auto;
+    left: 25.5rem;
+    transition: left $transitionDuration;
+}
+
+.layout-section {
+    position: relative;
+    top: 3.9rem;
+    flex: 1 1 auto;
+    overflow: auto;
+}
