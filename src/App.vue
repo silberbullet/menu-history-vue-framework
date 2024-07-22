@@ -1,11 +1,9 @@
-<script setup></script>
+<script setup>
+import AppLayout from './layout/AppLayout.vue';
+</script>
 
 <template>
-  <router-view />
-  <!-- 공통 모달(알럿, 컨펌창) 등록  -->
-  <ConfirmDialog />
-  <!-- 비동기 로딩바 등록 -->
-  <TnLoadingBar type="async" />
+    <AppLayout />
 </template>
 
 <style scoped></style>

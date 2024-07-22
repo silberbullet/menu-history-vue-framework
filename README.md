@@ -1,26 +1,15 @@
-<!-- prettier-ignore-start -->
-# 세션 응용 BO 화면 프레임워크
----
+# 세션 스토리지와 캐싱을 이용한 BO 화면 프레임워크
 
-## 메인 폴더 구조
-```
-.root
-└─src
-    ├─assets                    // static 파일 관리
-    │  ├─demo
-    │  ├─layout
-    ├─components                // 컴퍼넌트
-    │  ├─common                 // 공통 컴퍼넌트 (전역화 대상)
-    │  └─guide                  // UX,UI 가이드
-    ├─dictionary
-    ├─layout                    // App 레이아웃 설정
-    ├─router                    // 라우터 (path 관리)
-    ├─store                     // 전역 상태 관리 (세션 관리)
-    ├─utils                     // 공통함수 관리
-    └─views
-        └─pages
-            ├─common            // 공통 페이지 관리
+#### 배경
 
-```
+> 사내 CRM 프로젝트에서 기존 서버 사이드 JSP 프로젝트를 Cilent가 Vue로 전환하면서 컴포넌트 호출을 라우터 기능 없이 한 페이지에서 호출 되도록 기획 하였다. </br>
+> 라우터를 사용하지 않고 메뉴 히스토리 기능과 초기화 버튼 구현을 요구사항으로 받게 되었다. </br> > **Vue 에서 제공해주는 KeepAlive 기능은 세션 스토리지에 따라 캐싱을 지우는 기능이 없어 커스텀이 필요했다.** </br>
+> Pinia 라이브러리와 KeepAlive을 커스텀 하여 메뉴 히스토리를 구현하게 됐다.
 
-<!-- prettier-ignore-end -->
+## ▶ 구현
+
+1. **세션 스토리지의 선택 한 메뉴 등록**
+
+2. **KeepAlive 커스텀**
+
+## ▶ 테스트
