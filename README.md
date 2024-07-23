@@ -94,7 +94,7 @@
 ## ▶ 구현
 
 1. **Pinia 메뉴 상태 관리 구현**
-
+   https://github.com/silberbullet/menu-history-vue-framework/blob/8d44222dddd65cdb7a57f3f316b7fdee49071026/src/store/menu.ts#L23
 2. **메뉴 선택 시 세션 스토리지에 저장**
 
     AppMenu(MenuComponent)는 onMount시 import.meta.glob를 통해 Pinia에 저장한다.
@@ -161,7 +161,11 @@
 
 3. **메뉴히스토리 구현**
 
+    https://github.com/silberbullet/menu-history-vue-framework/blob/8d44222dddd65cdb7a57f3f316b7fdee49071026/src/layout/AppMenuHsty.vue#L1
+
 4. **KeepAlive 커스텀**
+
+    https://github.com/silberbullet/menu-history-vue-framework/blob/8d44222dddd65cdb7a57f3f316b7fdee49071026/src/store/menu.ts#L23
 
     Vue 3.0에서 개발된 KeepAlive 소스를 참조하여 defineComponent를 통해 커스텀한 TnKeepAlive 빌트인 컴포넌트
 
