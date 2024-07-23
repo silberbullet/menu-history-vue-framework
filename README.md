@@ -264,3 +264,4 @@
    ![Session FrameWork - Chrome 2024-07-22 18-53-29](https://github.com/user-attachments/assets/dbcef3d8-f30b-40ab-95a9-676469b230c0)
 
 2. **커스텀 KeepAlive 캐싱처리 확인**
+   ![Session FrameWork - Chrome 2024-07-23 13-56-19 (1)](https://github.com/user-attachments/assets/c375be77-e288-40e8-9dc1-840f1bc088b2)
